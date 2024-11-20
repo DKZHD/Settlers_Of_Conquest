@@ -1,8 +1,12 @@
 #include "Engine.h"
 
+#include <iostream>
 #include <stdexcept>
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include "InputManager.h"
 
 Engine& Engine::get_Instance()
 {
@@ -44,10 +48,17 @@ void Engine::Init()
 		throw std::runtime_error("Glad Could not be loaded");
 	}
 	glViewport(0, 0, 1920, 1080);
+
+	glfwSetKeyCallback(window, &InputManager::key_Callback);
+	glfwSetMouseButtonCallback(window, &InputManager::mouse_Callback);
+
 	systemManager.Init();
 }
 
 void Engine::Tick(float deltaTime)
 {
 	systemManager.update_Systems(deltaTime);
+
+	InputManager::get_Instance().run_InputEvents();
+	InputManager::get_Instance().reset_InputMap();
 }
