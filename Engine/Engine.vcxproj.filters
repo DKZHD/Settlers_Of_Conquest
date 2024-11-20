@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Engine Systems">
+      <UniqueIdentifier>{ee90bd16-9ee5-4cc5-81ab-00b105744eec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\ECS\Components\Components.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -30,11 +30,17 @@
     <ClInclude Include="src\ECS\Managers\ComponentManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\InputManager.h">
+      <Filter>Engine Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InputEvent.h">
+      <Filter>Engine Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine.h">
+      <Filter>Engine Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Dependencies\include\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -46,6 +52,12 @@
     </ClCompile>
     <ClCompile Include="src\ECS\Managers\ComponentManager.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputManager.cpp">
+      <Filter>Engine Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine.cpp">
+      <Filter>Engine Systems</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
