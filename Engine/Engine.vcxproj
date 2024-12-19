@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="src\ECS\Managers\ComponentManager.h" />
     <ClInclude Include="src\ECS\Components\Components.h" />
+    <ClInclude Include="src\ECS\Systems\NPCSystems.h" />
     <ClInclude Include="src\Engine.h" />
     <ClInclude Include="src\ECS\Systems\Systems.h" />
     <ClInclude Include="src\ECS\Managers\SystemManager.h" />
@@ -154,6 +155,7 @@
   <ItemGroup>
     <ClCompile Include="src\ECS\Managers\ComponentManager.cpp" />
     <ClCompile Include="Dependencies\include\glad.c" />
+    <ClCompile Include="src\ECS\Systems\NPCSystems.cpp" />
     <ClCompile Include="src\Engine.cpp" />
     <ClCompile Include="src\ECS\Systems\Systems.cpp" />
     <ClCompile Include="src\ECS\Managers\SystemManager.cpp" />
